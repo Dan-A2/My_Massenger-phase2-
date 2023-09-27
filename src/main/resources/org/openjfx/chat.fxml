@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.view.chat.ChatView">
+   <children>
+      <AnchorPane prefHeight="75.0" prefWidth="652.0" style="-fx-background-color: #800000;">
+         <children>
+            <Circle fx:id="pictureCircle" fill="#1fffca" layoutX="43.0" layoutY="38.0" radius="29.0" stroke="#1fffca" strokeType="INSIDE" />
+            <Label fx:id="nameLabel" layoutX="88.0" layoutY="14.0" prefHeight="30.0" prefWidth="308.0" text="Username/Groupname" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <font>
+                  <Font name="Algerian" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="numberOfMembers" alignment="CENTER" layoutX="88.0" layoutY="44.0" prefHeight="23.0" prefWidth="85.0" text="0" textFill="WHITE" visible="false">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="backBtn" layoutX="561.0" layoutY="1.0" mnemonicParsing="false" onAction="#getBack" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #43c1e4; -fx-border-color: #800000;" text="⬅" />
+            <Button fx:id="mainMenuBtn" layoutX="561.0" layoutY="28.0" mnemonicParsing="false" onAction="#getBackMM" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: #43c1e4; -fx-border-color: #800000;" text="Main menu">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="addUserBtn" layoutX="272.0" layoutY="45.0" mnemonicParsing="false" onAction="#addUser" prefHeight="27.0" prefWidth="65.0" style="-fx-background-color: #43c1e4; -fx-border-color: #800000;" text="add user" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="75.0" prefHeight="480.0" prefWidth="650.0">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="480.0" prefWidth="650.0">
+               <content>
+                  <GridPane fx:id="chatGrid" style="-fx-background-color: #F5FFFA;">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="555.0" prefHeight="46.0" prefWidth="650.0">
+         <children>
+            <Button fx:id="sendBtn" layoutX="593.0" layoutY="1.0" mnemonicParsing="false" onAction="#sendMassage" prefHeight="0.0" prefWidth="58.0" style="-fx-background-color: #c5e43d;" text="Send">
+               <font>
+                  <Font name="Cambria" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextArea fx:id="massageArea" layoutY="1.0" prefHeight="46.0" prefWidth="591.0" promptText="type your massage" />
+            <Button fx:id="attachBtn" layoutX="593.0" layoutY="23.0" mnemonicParsing="false" onAction="#attach" prefHeight="23.0" prefWidth="58.0" style="-fx-background-color: cyan;" text="Attach">
+               <font>
+                  <Font name="Cambria" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.view.chat.massage.withUserPic.MassageWithUserPicView">
+   <children>
+      <Circle fx:id="circle" fill="#1fffca" layoutX="47.0" layoutY="45.0" radius="33.0" stroke="WHITE" strokeType="INSIDE" />
+      <Label fx:id="usernameLabel" layoutX="92.0" layoutY="23.0" text="username">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="massageLabel" layoutX="99.0" layoutY="74.0" text="massage" textFill="#000000bd">
+         <font>
+            <Font name="Cambria" size="17.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="deleteBtn" fill="#0000007d" glyphName="TRASH" layoutX="184.0" layoutY="69.0" onMouseClicked="#deleteMassage" size="17" text="" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <FontAwesomeIconView fx:id="editBtn" fill="#00000080" glyphName="EDIT" layoutX="182.0" layoutY="29.0" onMouseClicked="#edit" size="17" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <FontAwesomeIconView fx:id="saveBtn" fill="#0000007f" glyphName="SAVE" layoutX="184.0" layoutY="50.0" onMouseClicked="#saveMassage" size="16" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIconView>
+   </children>
+</AnchorPane>

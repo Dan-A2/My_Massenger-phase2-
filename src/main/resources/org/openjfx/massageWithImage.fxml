@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.view.chat.massage.withUserPic.MassageWithImageView">
+   <children>
+      <Circle fx:id="circle" fill="#1fffca" layoutX="47.0" layoutY="47.0" radius="33.0" stroke="WHITE" strokeType="INSIDE" />
+      <Label fx:id="usernameLabel" layoutX="88.0" layoutY="24.0" text="username">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="massageLabel" layoutX="95.0" layoutY="66.0" text="massage" textFill="#000000bd">
+         <font>
+            <Font name="Cambria" size="17.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="deleteBtn" fill="#0000007c" glyphName="TRASH" layoutX="183.0" layoutY="20.0" onMouseClicked="#deleteMassage" size="17" text="" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <FontAwesomeIconView fx:id="editBtn" fill="#00000080" glyphName="EDIT" layoutX="181.0" layoutY="63.0" onMouseClicked="#edit" size="17" text="" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <FontAwesomeIconView fx:id="saveBtn" fill="#0000007c" glyphName="SAVE" layoutX="183.0" layoutY="40.0" onMouseClicked="#saveMassage" size="16" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <ImageView fx:id="imageView" fitHeight="194.0" fitWidth="258.0" layoutX="14.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

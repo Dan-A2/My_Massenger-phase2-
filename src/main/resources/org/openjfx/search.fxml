@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #006400;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.view.explorer.search.SearchView">
+   <children>
+      <Label alignment="CENTER" prefHeight="50.0" prefWidth="650.0" text="Search" textFill="YELLOW">
+         <font>
+            <Font name="Algerian" size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="172.0" layoutY="287.0" prefHeight="26.0" prefWidth="306.0" promptText="search for a user">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </TextField>
+      <FontAwesomeIconView fx:id="searchBtn" glyphName="SEARCH" layoutX="449.0" layoutY="308.0" onMouseClicked="#searchUser" size="25" wrappingWidth="28.79998779296875">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <Button fx:id="backBtn" layoutX="279.0" layoutY="475.0" mnemonicParsing="false" onAction="#getBack" prefHeight="32.0" prefWidth="91.0" style="-fx-background-color: #43c1e4; -fx-border-color: #006400;" text="⬅">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="mainMenuBtn" layoutX="279.0" layoutY="507.0" mnemonicParsing="false" onAction="#getBackMM" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: #43c1e4; -fx-border-color: #006400;" text="Main menu">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

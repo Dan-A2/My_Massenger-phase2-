@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="640.0" style="-fx-background-color: #642194;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.view.lists.user.requester.UserForListRequestView">
+   <children>
+      <Label fx:id="usernameLabel" prefHeight="35.0" prefWidth="162.0" text="username" textFill="WHITE">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+         <font>
+            <Font name="Cambria" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="acceptBtn" layoutX="588.0" mnemonicParsing="false" onAction="#acceptRequest" prefHeight="35.0" prefWidth="52.0" style="-fx-background-color: #00FF00; -fx-background-radius: 1em;" text="accept">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="ignoreBtn" layoutX="536.0" mnemonicParsing="false" onAction="#ignoreRequest" prefHeight="35.0" prefWidth="52.0" style="-fx-background-color: #00FFFF; -fx-background-radius: 1em;" text="ignore">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="denyBtn" layoutX="484.0" mnemonicParsing="false" onAction="#denyRequest" prefHeight="35.0" prefWidth="52.0" style="-fx-background-color: #FF4500; -fx-background-radius: 1em;" text="deny">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="settingPane" prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #8B4513;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.view.setting.SettingView">
+   <children>
+      <Label alignment="CENTER" prefHeight="50.0" prefWidth="650.0" text="setting" textFill="YELLOW">
+         <font>
+            <Font name="Algerian" size="36.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="52.0" layoutY="76.0" prefHeight="109.0" prefWidth="200.0" style="-fx-background-color: #EEE8AA; -fx-background-radius: 2em;">
+         <children>
+            <Label layoutX="14.0" layoutY="17.0" prefHeight="34.0" prefWidth="76.0" text="privacy:" textFill="#484747">
+               <font>
+                  <Font name="Cambria" size="20.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="privateRadioBtn" layoutX="108.0" layoutY="34.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="66.0" style="-fx-background-radius: 2em;" text="private">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="privacy" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="publicRadioBtn" layoutX="108.0" layoutY="65.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="59.0" style="-fx-background-radius: 2em;" text="public" toggleGroup="$privacy">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="362.0" layoutY="76.0" prefHeight="187.0" prefWidth="227.0" style="-fx-background-color: #EEE8AA; -fx-background-radius: 2em;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="34.0" prefWidth="200.0" text="who can see lastseen and stuff:" textFill="#484747">
+               <font>
+                  <Font name="Cambria" size="15.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="everyOneRBtn" layoutX="81.0" layoutY="67.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="76.0" style="-fx-background-radius: 2em;" text="everyone">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="lastseen" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="followersRBtn" layoutX="81.0" layoutY="104.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="76.0" style="-fx-background-radius: 2em;" text="followers" toggleGroup="$lastseen">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <RadioButton fx:id="nobodyRBtn" layoutX="81.0" layoutY="140.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="76.0" style="-fx-background-radius: 2em;" text="nobody" toggleGroup="$lastseen">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+      <Button fx:id="saveBtn" layoutX="305.0" layoutY="560.0" mnemonicParsing="false" onAction="#saveChanges" style="-fx-background-color: #DAA520;" text="save" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane layoutX="52.0" layoutY="212.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #EEE8AA; -fx-background-radius: 2em;">
+         <children>
+            <Label layoutX="14.0" layoutY="8.0" prefHeight="34.0" prefWidth="76.0" text="activity:" textFill="#484747">
+               <font>
+                  <Font name="Cambria" size="17.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="activeRBtn" layoutX="106.0" layoutY="5.0" mnemonicParsing="false" text="active">
+               <toggleGroup>
+                  <ToggleGroup fx:id="activity" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="inactiveRBtn" layoutX="106.0" layoutY="27.0" mnemonicParsing="false" text="inactive" toggleGroup="$activity" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="editBtn" layoutX="307.0" layoutY="560.0" mnemonicParsing="false" onAction="#editPressed" style="-fx-background-color: #DAA520;" text="edit">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Line endX="549.4000244140625" layoutX="101.0" layoutY="284.0" startX="-100.0" stroke="DARKKHAKI" />
+      <Button fx:id="logoutBtn" layoutX="114.0" layoutY="351.0" mnemonicParsing="false" onAction="#logout" prefHeight="34.0" prefWidth="76.0" style="-fx-background-color: #EEE8AA; -fx-background-radius: 1em;" text="log out">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="deleteAccountBtn" layoutX="428.0" layoutY="351.0" mnemonicParsing="false" onAction="#deleteAccount" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #EEE8AA; -fx-background-radius: 1em;" text="delete account">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

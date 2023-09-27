@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #4B0082;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.view.timeline.TimelineView">
+   <children>
+      <Label alignment="CENTER" prefHeight="60.0" prefWidth="650.0" style="-fx-border-color: #ffff00;" text="Timline" textFill="YELLOW">
+         <font>
+            <Font name="Algerian" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="backBtn" layoutX="558.0" mnemonicParsing="false" onAction="#getBack" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #43c1e4; -fx-border-color: #4B0082;" text="⬅" />
+      <Button fx:id="mainMenuBtn" layoutX="558.0" layoutY="27.0" mnemonicParsing="false" onAction="#getBackMM" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: #43c1e4; -fx-border-color: #4B0082;" text="Main menu">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="followingsTweetsBtn" layoutX="113.0" layoutY="179.0" mnemonicParsing="false" onAction="#showFollowingTweet" style="-fx-background-color: #ffff00;" text="Tweets from your followings">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="likedTweetsBtn" layoutX="113.0" layoutY="353.0" mnemonicParsing="false" onAction="#showLiked" style="-fx-background-color: #ffff00;" text="Tweets that your followings have liked">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

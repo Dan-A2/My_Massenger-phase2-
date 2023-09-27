@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/src/main/resources/save/Chat/chats" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/save/Groups/groups" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/save/Image/id" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/save/Massages/massages" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/save/Tweet&amp;Comment/tweet_comments" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/save/Users/activeUsers" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" default="true" project-jdk-name="14" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
